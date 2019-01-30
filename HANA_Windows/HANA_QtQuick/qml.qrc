@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>BaseTabBar.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>Hana_Main.qml</file>
+        <file>Hana_Quote.qml</file>
+        <file>images/hana_calli.png</file>
+        <file>icons/hana.ico</file>
+        <file>Hana_Infomation.qml</file>
+        <file>images/profile.jpg</file>
+    </qresource>
+</RCC>

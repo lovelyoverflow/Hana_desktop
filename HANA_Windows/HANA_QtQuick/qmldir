@@ -1,0 +1,11 @@
+module myapp.mycomponents
+BaseTabBar			1.0 BaseTabBar.qml
+QmlBusyIndicator	QmlBusyIndicator.qml
+QmlCircularProgress	QmlCircularProgress.qml
+QmlFontList			QmlFontList.qml
+QmlPageNavigation	QmlPageNavigation.qml
+QmlPlugin			QmlPlugin.qml
+QmlProgress			QmlProgress.qml
+QmlShowSideWindow	QmlShowSideWindow.qml
+QmlTableView		QmlTableView.qml
+QmlToggleButton QmlToggleButton.qml
