@@ -5,6 +5,7 @@ import QtQuick.Controls.Material 2.3
 
 Item {
     Pane {
+        id:servicePane
         x: parent.width * 0.07
         y: parent.height * 0.14
         width: parent.width * 0.2
@@ -18,6 +19,7 @@ Item {
         }
         Material.background: {
             color: window.color
+            //color: "#8BC34A"
             //radius: 20
         }
 
@@ -68,6 +70,7 @@ Item {
     }
 
     Column {
+        id: calliInfo
         x: window.width * 0.05
         y: window.height * 0.6
         Text {
@@ -98,7 +101,7 @@ Item {
 
         }
         BorderImage {
-            id: main_calli
+            id: mainCalli
             source: "qrc:/images/hana_calli.png"
             anchors.centerIn: parent
             border.left: 5; border.top: 5
