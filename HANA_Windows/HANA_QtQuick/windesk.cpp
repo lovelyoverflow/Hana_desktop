@@ -1,5 +1,6 @@
 #include "windesk.h"
 #include <ShlObj.h>
+#include <QDebug>
 
 Windesk::Windesk()
 { }
@@ -23,7 +24,7 @@ HDC Windesk::GetContext()
         return true;
     }, 0);
 
-    return GetDCEx(workerW, 0, 0x403);
+    return GetDCEx(workerW, 0, DCX_LOCKWINDOWUPDATE | DCX_CLIPCHILDREN);
 }
 
 std::wstring Windesk::GetWallpaperW()
