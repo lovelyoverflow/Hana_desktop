@@ -10,9 +10,6 @@ public:
     Windesk();
     HDC GetContext();
 
-    std::string GetWallpaperA();
-    void SetWallpaperA(const std::string& path);
-
     std::wstring GetWallpaperW();
     void SetWallpaperW(const std::wstring& path);
 private:

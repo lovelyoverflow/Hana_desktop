@@ -26,41 +26,6 @@ HDC Windesk::GetContext()
     return GetDCEx(workerW, 0, 0x403);
 }
 
-std::string Windesk::GetWallpaperA()
-{
-    // Search for the current wallpaper
-    std::string path(MAX_PATH, '\0');
-    SystemParametersInfoA(SPI_GETDESKWALLPAPER, path.size(), &path[0], 0);
-    path.resize(strlen(&path[0]));
-
-    // Check if the file exists
-    DWORD attr = GetFileAttributesA(path.c_str());
-    if (attr != INVALID_FILE_ATTRIBUTES && !(attr & FILE_ATTRIBUTE_DIRECTORY))
-    {
-        return path;
-    }
-
-    // Check for TranscodedWallpaper
-    path.clear();
-    path.resize(MAX_PATH, '\0');
-    SHGetFolderPathA(0, CSIDL_APPDATA, 0, 0, &path[0]);
-    path.resize(strlen(&path[0]));
-    path += "\\Microsoft\\Windows\\Themes\\TranscodedWallpaper";
-    attr = GetFileAttributesA(path.c_str());
-    if (attr != INVALID_FILE_ATTRIBUTES && !(attr & FILE_ATTRIBUTE_DIRECTORY))
-    {
-        return path;
-    }
-
-    // The user has no wallpaper
-    return "";
-}
-
-void Windesk::SetWallpaperA(const std::string& path)
-{
-    SystemParametersInfoA(SPI_SETDESKWALLPAPER, 0, (void*)&path[0], SPIF_UPDATEINIFILE | SPIF_SENDWININICHANGE);
-}
-
 std::wstring Windesk::GetWallpaperW()
 {
     // Search for the current wallpaper
