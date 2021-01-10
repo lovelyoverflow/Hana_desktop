@@ -11,7 +11,7 @@ import QtGraphicalEffects 1.0
 ApplicationWindow {
     //flags: Qt.BypassWindowManagerHint | Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint
     modality: Qt.ApplicationModal
-    flags: Qt.FramelessWindowHint | Qt.Window
+    //flags: Qt.FramelessWindowHint | Qt.Window
 
     //color: "#efd3ff"
     Material.theme: "Dark"

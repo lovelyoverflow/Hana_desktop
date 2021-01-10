@@ -27,7 +27,7 @@ Item {
         id: name
         x: 382
         y: 133
-        text: qsTr("??? 캘리그라퍼님")
+        text: qsTr("박재훈 캘리그라퍼님")
         font.family: "맑은 고딕"
         font.pixelSize: window.width * 0.02
         font.bold: true

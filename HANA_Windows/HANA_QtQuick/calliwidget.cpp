@@ -29,7 +29,7 @@ void CalliWidget::drawCalliWidget()
     GdiplusStartup(&gdiplusToken, &gdiplusStartupInput, NULL);
 
     Image* image = Image::FromFile(L"C:\\Users\\hana_calli.png");
-
+    //Image* image = Image::FromFile(L"");
     Graphics g(desktop);
     g.DrawImage(image, 800, 400);  // x, y좌표 외에도 width ,height를 받는 등의 오버로딩된 함수가 많다.
 
